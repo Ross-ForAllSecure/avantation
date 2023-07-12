@@ -61,8 +61,7 @@
     "repository": "anbuksv/avantation",
     "scripts": {
         "build": "tsc --build tsconfig.json",
-        "prepare": "tsc --build tsconfig.json",
-        "install": "npm run build",
+        "prepare": "notify-send 'in prepare' && tsc --build tsconfig.json && notify-send $(ls -lh)",
         "clean": "tsc --build --clean",
         "prepack": "rm -rf lib && tsc -b ",
         "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register/index.js 'test/**/*.ts'"
