@@ -61,7 +61,7 @@
     "repository": "anbuksv/avantation",
     "scripts": {
         "build": "tsc --build tsconfig.json",
-        "prepare": "echo here && npm run build",
+        "prepare": "tsc --build tsconfig.json",
         "install": "npm run build",
         "clean": "tsc --build --clean",
         "prepack": "rm -rf lib && tsc -b ",
